@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./main.js" defer></script>
+    <title>Комментарии</title>
+  </head>
+  <body>
+    <div class="comment-form">
+      <h3 class="comment__title">Оставьте комментарий</h3>
+      <form
+        action="send.php"
+        method="POST"
+        class="comment__form form"
+        id="form"
+      >
+        <div class="comment__input-block">
+          <div class="comment__input-group">
+            <input
+              type="text"
+              class="input comment__input name"
+              placeholder="Ваше имя*"
+              name="name"
+            />
+            <label id="name-error" class="invalid"></label>
+          </div>
+          <div class="comment__input-group">
+            <input
+              type="date"
+              class="input comment__input date"
+              placeholder="Дата"
+              name="date"
+            />
+          </div>
+        </div>
+        <div class="comment__input-group">
+          <textarea
+            class="comment__message comment__input message input"
+            cols="30"
+            rows="10"
+            placeholder="Текст сообщения*"
+            name="message"
+          ></textarea>
+          <label id="message-error" class="invalid"></label>
+        </div>
+        <div class="comment__wrapper">
+          <button class="button comment__button">Отправить</button>
+          <span class="comment__info">* Обязательные поля</span>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
